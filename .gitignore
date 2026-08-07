@@ -1,0 +1,9 @@
+.env
+.env.*
+config/database.php
+logs/
+*.log
+uploads/avatars/*
+uploads/news/*
+!uploads/avatars/.gitkeep
+!uploads/news/.gitkeep
