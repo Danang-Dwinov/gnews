@@ -66,8 +66,6 @@ if(isset($_POST['submit-login'])){
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/pages/auth.css">
-  <link rel="stylesheet" href="../assets/css/components/header.css">
 </head>
 <body>
   <?php require_once "/storage/emulated/0/gnews/components/header.php";?>
