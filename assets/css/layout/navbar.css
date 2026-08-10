@@ -1,0 +1,75 @@
+/*Navigation Bar header*/
+.home-nav {
+  position: sticky;
+  top:0px;
+  z-index:999;
+}
+.home-nav-list {
+  border: 2px solid;
+  background-color: black;
+  list-style-type: none;
+  padding: 0px;
+  margin:0px;
+  text-align: center;
+  overflow: hidden;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.home-nav-link {
+  text-decoration: none;
+  color:white;
+  padding:7px;
+  display: block;
+  float: left;
+  font-size: 15px;
+}
+.home-nav-link:hover{
+  background-color: #242424;
+}
+.title-nav-home {
+  margin-right: auto;
+  margin:9px;
+  margin-block: 25px;
+  border: 0px solid;
+}
+.page-latest{
+  display:none;
+}
+.page-headline{
+  display:none;
+}
+.page-populer{
+  display:none;
+}
+.page-economy{
+  display:none;
+}
+.page-tecnology{
+  display:none;
+}
+.page-market{
+  display:none;
+}
+.page-finance{
+  display:none;
+}
+.page-politics{
+  display:none;
+}
+.page-ai{
+  display:none;
+}
+.page-world{
+  display:none;
+}
+.page-sport{
+  display:none;
+}
+@media(min-width:768px){
+  .home-nav-link{
+    padding:8px;
+    padding-inline:18px;
+    font-size: 16px;
+  }
+}

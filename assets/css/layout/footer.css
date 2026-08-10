@@ -1,0 +1,42 @@
+.footer {
+  background-color: red;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left:0px;
+  padding: 0px;
+  margin:0px;
+}
+.footer-list {
+  border: 0px solid;
+  position:relative;
+  display:flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding-block:22px;
+}
+#footer-home{
+  display:inline-block;
+  position:absolute;
+  left: 0px;
+  width:50%;
+  color:white;
+  font-size: 21px;
+}
+#footer-profile{
+  display:inline-block;
+  position: absolute;
+  right: 0px;
+  width:50%;
+  color:white;
+  font-size: 21px;
+}
+@media (min-width:768px){
+  .footer-list{
+    padding-block:25px;
+  }
+  .footer-link{
+    font-size: 25px;
+  }
+}

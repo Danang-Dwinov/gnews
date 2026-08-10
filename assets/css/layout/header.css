@@ -1,0 +1,12 @@
+.header {
+  background-color: red;
+  color:white;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100%;
+  display:flex;
+}
+#header-title{
+  position: relative;
+  left: 12px;
+}

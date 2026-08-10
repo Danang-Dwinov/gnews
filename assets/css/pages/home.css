@@ -1,0 +1,110 @@
+.home-page {
+  margin:0px;
+  padding:0px;
+  font-family: Georgina,serif;
+  display:none;
+}
+
+/*Navigation Bar header*/
+.home-nav {
+  position: sticky;
+  top:0px;
+  z-index:999;
+}
+.home-nav-list {
+  border: 2px solid;
+  background-color: black;
+  list-style-type: none;
+  padding: 0px;
+  margin:0px;
+  text-align: center;
+  overflow: hidden;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.home-nav-link {
+  text-decoration: none;
+  color:white;
+  padding:7px;
+  display: block;
+  float: left;
+  font-size: 15px;
+}
+.home-nav-link:hover{
+  background-color: #242424;
+}
+.title-nav-home {
+  margin-right: auto;
+  margin:9px;
+  margin-block: 25px;
+  border: 0px solid;
+}
+.page-latest{
+  display:none;
+}
+.page-headline{
+  display:none;
+}
+.page-populer{
+  display:none;
+}
+.page-economy{
+  display:none;
+}
+.page-tecnology{
+  display:none;
+}
+.page-market{
+  display:none;
+}
+.page-finance{
+  display:none;
+}
+.page-politics{
+  display:none;
+}
+.page-ai{
+  display:none;
+}
+.page-world{
+  display:none;
+}
+.page-sport{
+  display:none;
+}
+@media(min-width:768px){
+  .home-nav-link{
+    padding:8px;
+    padding-inline:18px;
+    font-size: 16px;
+  }
+}
+
+.news-card {
+  border:1px solid;
+  border-color: lightgrey;
+  margin:9px;
+  display:flex;
+  height: 90px;
+  align-items:flex-start;
+}
+.news-card-body {
+  flex:1;
+}
+.news-card-image {
+  width:35%;
+  height: 90px;
+  object-fit:cover;
+}
+.news-card-link {
+  margin:3px;
+  text-decoration: none;
+  display:block;
+}
+.news-card-text {
+  color: black;
+  position:relative;
+  margin:10px;
+  font-size:14px;
+}
