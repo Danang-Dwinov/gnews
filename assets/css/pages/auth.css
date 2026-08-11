@@ -53,6 +53,9 @@
 #form-login {
   display:none;
 }
+#login-username-label {
+  font-size: 18px;
+}
 #login-email-label {
   font-size: 18px;
 }
@@ -60,6 +63,15 @@
   font-size: 18px;
 }
 /*Form Login*/
+#login-username-input {
+  font-size: 16px;
+  padding:9px;
+  border-radius: 5px;
+  border: 0px solid;
+  background-color: #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+}
 #login-email-input {
   font-size: 16px;
   padding:9px;
