@@ -140,5 +140,6 @@ if(isset($_POST['submit-login'])){
       </div>
     </section>
   </main>
+  <script type="module" src="../assets/js/script.js"></script>
 </body>
 </html>
