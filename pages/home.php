@@ -1,41 +1,26 @@
 <?php
 session_start();
-
 if(!isset($_SESSION['username'])){
-  header('Location: auth.php');
-  exit();
+  header("Location: /auth");
+  exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>GNews.com</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/pages/home.css">
-  <link rel="stylesheet" href="../assets/css/components/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
   <?php require_once "/storage/emulated/0/gnews/components/header.php";?>
   <main>
     <section class="home-page" id="home-page">
-      <nav class="home-nav">
-        <ul class="home-nav-list">
-          <li><a href="#page-latest" class="home-nav-link" id="nav-latest">Latest</a></li>
-          <li><a href="#page-headline" class="home-nav-link" id="nav-headline">Headline</a></li>
-          <li><a href="#page-populer" class="home-nav-link" id="nav-populer">Populer</a></li>
-          <li><a href="#page-economy" class="home-nav-link" id="nav-economy">Economy</a></li>
-          <li><a href="#page-tecnology" class="home-nav-link" id="nav-tecnology">Technology</a></li>
-          <li><a href="#page-market" class="home-nav-link" id="nav-market">Market</a></li>
-          <li><a href="#page-finance" class="home-nav-link" id="nav-finance">Finance</a></li>
-          <li><a href="#page-politics" class="home-nav-link" id="nav-politics">Politics</a></li>
-          <li><a href="#page-ai" class="home-nav-link" id="nav-ai">Ai</a></li>
-          <li><a href="#page-world" class="home-nav-link" id="nav-world">world</a></li>
-          <li><a href="#page-sport" class="home-nav-link" id="nav-sport">Sport</a></li>
-        </ul>
-      </nav>
+      <?php require_once "/storage/emulated/0/gnews/components/navbar.php";?>
       <div class="page-latest" id="page-latest">
         <h2 class="title-nav-home" id="page-latest-title">Latest -></h2>
         <div class="news-card">
@@ -80,5 +65,6 @@ if(!isset($_SESSION['username'])){
     </section>
   </main>
   <?php require_once "/storage/emulated/0/gnews/components/footer.php";?>
+  <script type="module" src="../assets/js/pages/home.js"></script>
 </body>
 </html>
