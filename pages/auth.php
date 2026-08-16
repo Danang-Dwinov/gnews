@@ -1,6 +1,10 @@
 <?php
-require '/storage/emulated/0/gnews/config/database.php';
+require_once __DIR__ . '/../config/database.php';
+
 session_start();
+$_SESSION['username'] = $username;
+header("Location: /home");
+exit;
 
 if(isset($_POST['submit-signup'])){
   $full_name = $_POST['name'];
@@ -16,10 +20,10 @@ if(isset($_POST['submit-signup'])){
   $stmt = $conn->prepare($sql);
   
   if($stmt->execute([$full_name, $username, $email, $hash_password])){
-    header("Location: home.php");
+    header("Location: /");
     exit();
   } else{
-    header("Location: auth.php");
+    header("Location: /auth");
     exit();
   }
 }
@@ -43,7 +47,7 @@ if(isset($_POST['submit-login'])){
       if(password_verify($password, $row["password"])){
         $_SESSION['username'] = $username;
         
-        header("Location: home.php");
+        header("Location: /");
         exit();
         
       } else {
@@ -65,7 +69,7 @@ if(isset($_POST['submit-login'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <?php require_once "/storage/emulated/0/gnews/components/header.php";?>
@@ -73,10 +77,10 @@ if(isset($_POST['submit-login'])){
     <section class="login-page" id="login-page">
       <div class="container-main" align="center">
         <div class="main-list-form" id="main-list-form">
-          <a href="#form-login" id="opsi-login" title="form login">Log In</a>
-          <a href="#form-signup" id="opsi-signup" title="form signup">Sign Up</a>
+          <button id="opsi-login">Log In</button>
+          <button id="opsi-signup">Sign Up</buttom>
         </div>
-        <form method="POST" action="auth.php" href="#form-login" id="form-login">
+        <form method="POST" action="/auth" id="form-login">
           <br>
           <label id="login-username-label" for="username">username :</label>
           <br>
@@ -100,7 +104,7 @@ if(isset($_POST['submit-login'])){
           <br>
           <input type="submit" value="Login" id="login-submit-btn" name="submit-login">
         </form>
-        <form method="POST" action="auth.php" href="#form-signup" id="form-signup">
+        <form method="POST" action="/auth" id="form-signup">
           <label id="signup-name-label" for="name">full name :</label>
           <br>
           <input type="text" id="signup-name-input" name="name" placeholder="Darren Junior" required title="Input name">
