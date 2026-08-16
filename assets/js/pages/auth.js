@@ -22,5 +22,13 @@ function button_option(){
     optionSignup.style.backgroundColor="red";
   });
 }
-
 button_option();
+
+function showPassword(){
+  const x = document.getElementById("signup-password-input");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
