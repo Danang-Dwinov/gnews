@@ -2,9 +2,6 @@
 require_once __DIR__ . '/../config/database.php';
 
 session_start();
-$_SESSION['username'] = $username;
-header("Location: /home");
-exit;
 
 if(isset($_POST['submit-signup'])){
   $full_name = $_POST['name'];
@@ -69,10 +66,10 @@ if(isset($_POST['submit-login'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <?php require_once "/storage/emulated/0/gnews/components/header.php";?>
+  <?php require_once __DIR__ . "/../components/header.php";?>
   <main>
     <section class="login-page" id="login-page">
       <div class="container-main" align="center">
@@ -144,6 +141,6 @@ if(isset($_POST['submit-login'])){
       </div>
     </section>
   </main>
-  <script type="module" src="../assets/js/script.js"></script>
+  <script type="module" src="../assets/js/pages/auth.js"></script>
 </body>
 </html>
