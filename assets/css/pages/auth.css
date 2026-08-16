@@ -24,7 +24,9 @@
   display:flex;
 }
 #opsi-login {
+  font-family: Georgina,serif;
   color:black;
+  background-color: white;
   border:1px solid;
   border-color: lightgrey;
   border-top-left-radius: 12px;
@@ -33,11 +35,14 @@
   box-sizing: border-box;
   text-decoration: none;
   padding:5px 0px 5px 15px;
+  font-size: 20px;
   flex:1;
   text-align: center;
 }
 #opsi-signup {
+  font-family: Georgina,serif;
   color:black;
+  background-color: white;
   border:1px solid;
   border-color: lightgrey;
   border-top-right-radius: 12px;
@@ -46,6 +51,7 @@
   box-sizing: border-box;
   text-decoration: none;
   padding:5px 10px 5px 0px;
+  font-size: 20px;
   flex:1;
   text-align: center;
 }
@@ -122,7 +128,7 @@
 }
 /*form signup*/
 #form-signup{
-  display:none;
+  display:block;
 }
 #signup-name-label {
   font-size: 18px;
@@ -199,9 +205,21 @@
 }
 
 /*Fitur tombol login*/
-.signup-first-options {
+.signup-first-checkbox {
   display:flex;
   align-items: center;
+  margin-top:3px;
+}
+#signup-show-label {
+  font-size: 13px;
+}
+#signup-show-checkbox {
+  font-size: 14px;
+}
+.signup-second-checkbox {
+  display:flex;
+  align-items: center;
+  margin-top:3px;
 }
 #signup-remember-label {
   font-size: 13px;
@@ -214,22 +232,20 @@
   text-decoration: none;
   margin-left: auto;
 }
-.signup-second-options {
+.signup-thred-checkbox {
   display:flex;
   align-items: center;
-  justify-content: center;
-  gap: 1px;
-  margin-top: 7px;
+  margin-top:3px;
 }
 #signup-agree-label {
-  font-size: 14px;
+  font-size: 13px;
   position:relative;
-  right: 20px;
+  right: 0px;
 }
 #signup-agree-checkbox {
   font-size: 14px;
   position:relative;
-  right: 20px;
+  right: 0px;
   flex-shrink: 0;
 }
 
