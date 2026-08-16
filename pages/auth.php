@@ -124,14 +124,18 @@ if(isset($_POST['submit-login'])){
           <br>
           <label id="signup-password-label" for="password">password :</label>
           <br>
-          <input type="password" id="signup-password-input" name="password" placeholder="example : daRReN123#$_" minlegth="8" required title="input password">
+          <input type="password" id="signup-password-input" name="password" placeholder="example : daRReN123#$_" minlength="8" required title="input password">
           <br>
-          <div class="signup-first-options">
+          <div class="signup-first-checkbox">
+            <input type="checkbox" id="signup-show-label"onclick="showPassword()">
+            <label for="signup-show-checkbox" id="signup-show-label" >Show password</label>
+          </div>
+          <div class="signup-second-checkbox">
             <input type="checkbox" id="signup-remember-checkbox">
-            <label for="signup-remember-checkbox" id="signup-remember-label">Remember me</label>
+            <label for="signup-remember-checkbox" id="signup-show-label">Remember me</label>
             <a href="https://myaccount.google.com/?hl=id" id="signup-forgot-password-link">forgot password?</a>
           </div>
-          <div class="signup-second-options">
+          <div class="signup-thred-checkbox">
             <input type="checkbox" id="signup-agree-checkbox">
             <label for="signup-agree-checkbox" id="signup-agree-label">I agree to the Terms & Conditions and Privacy Policy</label>
           </div>
@@ -141,6 +145,6 @@ if(isset($_POST['submit-login'])){
       </div>
     </section>
   </main>
-  <script type="module" src="../assets/js/pages/auth.js"></script>
+  <script src="../assets/js/pages/auth.js"></script>
 </body>
 </html>
