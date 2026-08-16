@@ -1,11 +1,11 @@
-export function button_option(){
-  const optionLogin = document.getElementById("option-login");
-  const optionSignup = document.getElementById("option-signup");
+function button_option(){
+  const optionLogin = document.getElementById("opsi-login");
+  const optionSignup = document.getElementById("opsi-signup");
   
   const formLogin = document.getElementById("form-login");
   const formSignup = document.getElementById("form-signup");
   
-  optionLogin.addEvenListener("click", 
+  optionLogin.addEventListener("click", 
   () => {
     formLogin.style.display="block";
     formSignup.style.display="none";
@@ -13,7 +13,7 @@ export function button_option(){
     optionLogin.style.backgroundColor="red";
     optionSignup.style.backgroundColor="white";
   });
-  optionSignup.addEvenListener("click", 
+  optionSignup.addEventListener("click", 
   () => {
     formLogin.style.display="none";
     formSignup.style.display="block";
@@ -22,3 +22,5 @@ export function button_option(){
     optionSignup.style.backgroundColor="red";
   });
 }
+
+button_option();
