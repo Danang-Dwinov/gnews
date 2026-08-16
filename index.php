@@ -11,6 +11,9 @@ switch ($request) {
     case '/auth':
         require __DIR__ . '/pages/auth.php';
         break;
+    case '/logout':
+        require __DIR__ . '/pages/logout.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/pages/404.php';
