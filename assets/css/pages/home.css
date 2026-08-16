@@ -8,34 +8,34 @@
   
 }
 .page-headline{
-  
+  display:none;
 }
 .page-populer{
-  
+  display:none;
 }
 .page-economy{
-  
+  display:none;
 }
 .page-tecnology{
-  
+  display:none;
 }
 .page-market{
-  
+  display:none;
 }
 .page-finance{
-  
+  display:none;
 }
 .page-politics{
-  
+  display:none;
 }
 .page-ai{
-  
+  display:none;
 }
 .page-world{
-  
+  display:none;
 }
 .page-sport{
-  
+  display:none;
 }
 @media(min-width:768px){
   .home-nav-link{
