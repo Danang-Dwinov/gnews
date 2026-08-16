@@ -17,10 +17,10 @@ if(!isset($_SESSION['username'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <?php require_once "/storage/emulated/0/gnews/components/header.php";?>
+  <?php require_once __DIR__ . "/../components/header.php";?>
   <main>
     <section class="home-page" id="home-page">
-      <?php require_once "/storage/emulated/0/gnews/components/navbar.php";?>
+      <?php require_once __DIR__ . "/../components/navbar.php";?>
       <div class="page-latest" id="page-latest">
         <h2 class="title-nav-home" id="page-latest-title">Latest -></h2>
         <div class="news-card">
@@ -64,7 +64,7 @@ if(!isset($_SESSION['username'])){
       </div>
     </section>
   </main>
-  <?php require_once "/storage/emulated/0/gnews/components/footer.php";?>
+  <?php require_once __DIR__ . "/../components/footer.php";?>
   <script type="module" src="../assets/js/pages/home.js"></script>
 </body>
 </html>
