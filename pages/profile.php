@@ -1,9 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: /auth");
-  exit;
-}
+require_once __DIR__ . '/../controllers/profilecontrollers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,16 +16,16 @@ if(!isset($_SESSION['username'])){
     <section class="profile-page" id="profile-page">
       <div class="container-profile-header">
         <div class="img-profile-head">
-          <img src="assets/image_profile.jpg" id="img-profile">
+          <img src="../assets/images/image_profile.jpg" id="img-profile">
         </div>
         <div class="data-profile-head">
-          <p id="username-text-head"></p>
-          <p id="email-text-head"></p>
+          <p id="username-text-head"><?=htmlspecialchars($user['username'])?></p>
+          <p id="email-text-head"><?=htmlspecialchars($user['email'])?></p>
         </div>
       </div>
       <div class="main-fitur-profile">
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail"href="#page-detail-profile">Detail Profile</a>
+          <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-favorit"href="#page-favorit-profile">Favorit</a>
@@ -47,7 +43,7 @@ if(!isset($_SESSION['username'])){
           <a class="button-fitur-profile" id="button-click-about" href="#page-about-profile">About</a>
         </div>
         <form action="/logout" method="POST" class="fitur-profile">
-          <button type="submit" class="button-fitur-profile" id="button-click-logout" name="button-click-logout">Log Out</button>
+          <a href="/logout" class="button-fitur-profile" id="button-click-logout">Log Out</a>
         </form>
       </div>
     </section>
