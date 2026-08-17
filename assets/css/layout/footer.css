@@ -1,5 +1,5 @@
 .footer {
-  background-color: red;
+  background-color: white;
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -14,22 +14,34 @@
   text-align: center;
   align-items: center;
   width: 100%;
-  padding-block:22px;
+  padding-block:20px;
 }
 #footer-home{
+  border: 0px solid;
   display:inline-block;
   position:absolute;
+  top:7px;
   left: 0px;
-  width:50%;
-  color:white;
+  width:39%;
+  color:black;
+  font-size: 21px;
+}
+#footer-search{
+  display:inline-block;
+  position:absolute;
+  top:7px;
+  left: 140px;
+  width:22%;
+  color:black;
   font-size: 21px;
 }
 #footer-profile{
   display:inline-block;
   position: absolute;
+  top:7px;
   right: 0px;
-  width:50%;
-  color:white;
+  width:39%;
+  color:black;
   font-size: 21px;
 }
 @media (min-width:768px){
