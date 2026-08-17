@@ -1,0 +1,31 @@
+.page-detail-profile {
+  margin:0px;
+  padding:0px;
+  text-align: center;
+}
+#detail-img-profile{
+  height: 140px;
+  width: 146px;
+  margin-top:20px;
+}
+.detail-profile{
+  border-block:1px solid;
+  border-color: lightgrey;
+}
+.text-detail-profile{
+  display:inline-block;
+  font-size: 16px;
+  margin-left:7px;
+  margin-block:10px;
+}
+@media (min-width:768px){
+  #detail-img-profile{
+    height: 240px;
+    width: 246px;
+  }
+  .text-detail-profile{
+    font-size: 26px;
+    margin-left:22px;
+    margin-block:20px;
+  }
+}
