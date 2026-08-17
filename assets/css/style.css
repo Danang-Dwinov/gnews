@@ -4,8 +4,10 @@
 @import url('pages/auth.css');
 @import url('pages/home.css');
 @import url('pages/profile.css');
+@import url('pages/detail.css');
 
 /*layout*/
 @import url('layout/header.css');
 @import url('layout/footer.css');
 @import url('layout/navbar.css');
+@import url('layout/back.css');
