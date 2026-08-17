@@ -1,9 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: /auth");
-  exit;
-}
+require_once __DIR__ . '/../config/session.php';
 ?>
 
 <!DOCTYPE html>
