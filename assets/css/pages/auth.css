@@ -57,7 +57,7 @@
 }
 /*text form*/
 #form-login {
-  display:none;
+  display:block;
 }
 #login-username-label {
   font-size: 18px;
@@ -128,7 +128,7 @@
 }
 /*form signup*/
 #form-signup{
-  display:block;
+  display:none;
 }
 #signup-name-label {
   font-size: 18px;
