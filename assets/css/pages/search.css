@@ -1,0 +1,28 @@
+.div-search{
+  display:flex;
+  width:100%;
+  justify-content: center;
+  gap:3px;
+}
+#search-icon{
+  font-size:15px;
+  margin-block:19px;
+  padding-inline:5px;
+}
+#search-input{
+  border:1px solid;
+  border-color:lightgrey;
+  text-align:center;
+  font-size: 14px;
+  padding-block: 6px;
+  width:290px;
+  margin-block:12px;
+  border-radius:10px;
+}
+#xmark-button{
+  border:0px solid;
+  font-size:15px;
+  margin-block:18px;
+  background-color: white;
+  border-color: white;
+}
