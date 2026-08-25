@@ -19,17 +19,26 @@
 .home-nav-link {
   text-decoration: none;
   color:white;
+  background-color: transparent;
+  border: none;
   padding:7px;
   display: block;
   float: left;
   font-size: 15px;
+  cursor: pointer;
 }
 .home-nav-link:hover{
   background-color: #242424;
 }
+
+.home-nav-link.active {
+  background-color: #d40000;
+  color: white;
+}
+
 .title-nav-home {
   margin-right: auto;
   margin:9px;
-  margin-block: 25px;
+  margin-block: 15px;
   border: 0px solid;
 }
