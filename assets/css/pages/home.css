@@ -4,38 +4,7 @@
   font-family: Georgina,serif;
 }
 
-.page-latest{
-  
-}
-.page-headline{
-  display:none;
-}
-.page-populer{
-  display:none;
-}
-.page-economy{
-  display:none;
-}
-.page-tecnology{
-  display:none;
-}
-.page-market{
-  display:none;
-}
-.page-finance{
-  display:none;
-}
-.page-politics{
-  display:none;
-}
-.page-ai{
-  display:none;
-}
-.page-world{
-  display:none;
-}
-.page-sport{
-  display:none;
+.page-category {
 }
 @media(min-width:768px){
   .home-nav-link{
@@ -43,6 +12,12 @@
     padding-inline:18px;
     font-size: 16px;
   }
+}
+
+.news-list {
+  display:flex;
+  flex-direction:column;
+  gap:0px;
 }
 
 .news-card {
@@ -71,4 +46,20 @@
   position:relative;
   margin:10px;
   font-size:14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news-card-empty {
+  margin:9px;
+  color: grey;
+  font-size:14px;
+}
+.news-card-date{
+  color:#303030;
+  position: relative;
+  left: 10px;
+  top: 0px;
+  font-size: 9px;
 }
