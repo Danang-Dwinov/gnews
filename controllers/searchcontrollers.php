@@ -7,10 +7,10 @@ $searchResults = [];
 
 if($keyword !== ''){
 
-  $sql = 'SELECT id, title, content, source_name, url, category, image_url
+  $sql = 'SELECT id, title, content, source_name, url, category, image_url, published_at
         FROM news
         WHERE title LIKE ? OR content LIKE ?
-        ORDER BY id DESC';
+        ORDER BY published_at DESC';
         
   $stmt = $conn->prepare($sql);
   $stmt->execute([
