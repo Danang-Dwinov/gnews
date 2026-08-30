@@ -5,7 +5,7 @@ $categories = require __DIR__ . '/../config/category.php';
 
 $sql = 'SELECT id, title, content, source_name, url, category, image_url, published_at 
         FROM news 
-        ORDER BY id DESC';
+        ORDER BY published_at DESC';
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $allNews = $stmt->fetchAll(PDO::FETCH_ASSOC);
