@@ -1,4 +1,21 @@
 <?php
+session_start();
+
+if(!isset($_SESSION["username"])){
+  ?>
+  <?php require_once __DIR__ . "/../components/back.php";?>
+  <main>
+    <section class="page-detail-profile" id="page-detail-profile">
+      <img src="../assets/images/image_profile.jpg" id="detail-img-profile">
+      <div class="detail-login">
+        <label for="btn-login-detail">Click for -> </label>
+        <a href="/auth" id="btn-login-detail">Login</a>
+      </div>
+    </section>
+  </main>
+  <?php
+  exit;
+}
 require_once __DIR__ . '/../controllers/profilecontrollers.php';
 ?>
 <!DOCTYPE html>
