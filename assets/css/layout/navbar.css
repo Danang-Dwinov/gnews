@@ -32,7 +32,8 @@
 }
 
 .home-nav-link.active {
-  background-color: #d40000;
+  border-bottom:2.5px solid;
+  border-color: red;
   color: white;
 }
 
