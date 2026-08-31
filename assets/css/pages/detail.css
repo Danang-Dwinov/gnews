@@ -29,3 +29,10 @@
     margin-block:20px;
   }
 }
+.detail-login{
+  margin-top:15px;
+}
+#btn-login-detail{
+  text-decoration: none;
+  font-size: 17px;
+}
