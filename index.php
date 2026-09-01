@@ -8,6 +8,9 @@ switch ($request) {
     case '/search':
         require __DIR__ . '/pages/search.php';
         break;
+    case '/content':
+        require __DIR__ . '/pages/content.php';
+        break;
     case '/profile':
         require __DIR__ . '/pages/profile.php';
         break;

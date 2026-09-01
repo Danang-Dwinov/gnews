@@ -23,11 +23,10 @@ require_once __DIR__ . '/../helper/homeRenderNews.php';
         <div class="page-category" id="page-<?=$slug?>" <?= $slug !== 'latest' ? 'style="display:none;"' : '' ?>>
           <h2 class="title-nav-home" id="page-<?=$slug?>-title"><?=htmlspecialchars($label)?> -></h2>
           <div class="news-list">
-            <?php render_news_cards($newsByCategory[$slug]); ?>
+              <?php render_news_cards($newsByCategory[$slug]); ?>
           </div>
         </div>
       <?php endforeach; ?>
-      
     </section>
   </main>
   <?php require_once __DIR__ . "/../components/footer.php";?>
