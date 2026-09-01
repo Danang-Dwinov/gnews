@@ -1,3 +1,3 @@
 function clearSearch(){
-  document.getElementById("xmark-button").value = "";
+  document.getElementById("search-input").value = "";
 }
