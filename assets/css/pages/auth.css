@@ -204,18 +204,6 @@
   box-sizing: border-box;
 }
 
-/*Fitur tombol login*/
-.signup-first-checkbox {
-  display:flex;
-  align-items: center;
-  margin-top:3px;
-}
-#signup-show-label {
-  font-size: 13px;
-}
-#signup-show-checkbox {
-  font-size: 14px;
-}
 .signup-second-checkbox {
   display:flex;
   align-items: center;
@@ -272,4 +260,28 @@
 }
 #signup-submit-btn:hover{
   background-color: #ff4f4f;
+}
+
+/*Checkbox show password*/
+.password-checkbox {
+  display:flex;
+  align-items: center;
+  margin-top:3px;
+}
+#password-show-label {
+  font-size: 13px;
+}
+#password-show-checkbox {
+  font-size: 14px;
+}
+.back-home {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  width:100%;
+}
+.back-home:hover {
+  text-decoration: underline;
 }
