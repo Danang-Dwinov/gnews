@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
-
 session_start();
 
 if(isset($_POST['submit-signup'])){
@@ -43,7 +42,6 @@ if(isset($_POST['submit-login'])){
       
       if(password_verify($password, $row["password"])){
         $_SESSION['username'] = $username;
-        
         header("Location: /");
         exit();
         
@@ -67,6 +65,7 @@ if(isset($_POST['submit-login'])){
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
   <?php require_once __DIR__ . "/../components/header.php";?>
@@ -92,14 +91,17 @@ if(isset($_POST['submit-login'])){
           <label id="login-password-label" for="password">password :</label>
           <br>
           <input type="password" id="login-password-input" name="password" placeholder="example : daRReN123#$_" minlegth="8" title="input password">
-          <br>
+          <div class="password-checkbox">
+            <input type="checkbox" id="password-show-label"onclick="showPassword()">
+            <label for="password-show-checkbox" id="password-show-label" >Show password</label>
+          </div>
           <div class="login-options">
             <input type="checkbox" id="login-remember-checkbox">
             <label for="login-remember-checkbox" id="login-remember-label">Remember me</label>
             <a href="https://myaccount.google.com/?hl=id" id="login-forgot-password-link">forgot password?</a>
           </div>
-          <br>
           <input type="submit" value="Login" id="login-submit-btn" name="submit-login">
+          <a href="/" class="back-home"> <i class="fa-solid fa-arrow-left"></i> Back to Home</a>
         </form>
         <form method="POST" action="/auth" id="form-signup">
           <label id="signup-name-label" for="name">full name :</label>
@@ -126,21 +128,21 @@ if(isset($_POST['submit-login'])){
           <br>
           <input type="password" id="signup-password-input" name="password" placeholder="example : daRReN123#$_" minlength="8" required title="input password">
           <br>
-          <div class="signup-first-checkbox">
-            <input type="checkbox" id="signup-show-label"onclick="showPassword()">
-            <label for="signup-show-checkbox" id="signup-show-label" >Show password</label>
+          <div class="password-checkbox">
+            <input type="checkbox" id="password-show-label"onclick="showPassword()">
+            <label for="password-show-checkbox" id="password-show-label" >Show password</label>
           </div>
           <div class="signup-second-checkbox">
             <input type="checkbox" id="signup-remember-checkbox">
-            <label for="signup-remember-checkbox" id="signup-show-label">Remember me</label>
+            <label for="signup-remember-checkbox" id="signup-remember-label">Remember me</label>
             <a href="https://myaccount.google.com/?hl=id" id="signup-forgot-password-link">forgot password?</a>
           </div>
           <div class="signup-thred-checkbox">
             <input type="checkbox" id="signup-agree-checkbox">
             <label for="signup-agree-checkbox" id="signup-agree-label">I agree to the Terms & Conditions and Privacy Policy</label>
           </div>
-          <br>
           <input type="submit" value="SignUp" id="signup-submit-btn" name="submit-signup">
+          <a href="/" class="back-home"> <i class="fa-solid fa-arrow-left"></i> Back to Home</a>
         </form>
       </div>
     </section>
