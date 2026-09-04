@@ -26,9 +26,15 @@ button_option();
 
 function showPassword(){
   const x = document.getElementById("signup-password-input");
+  const y = document.getElementById("login-password-input");
   if (x.type === "password") {
     x.type = "text";
   } else {
     x.type = "password";
+  }
+  if (y.type === "password") {
+    y.type = "text";
+  } else {
+    y.type = "password";
   }
 }
