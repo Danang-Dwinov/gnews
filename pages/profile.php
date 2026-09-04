@@ -15,22 +15,22 @@ if(!isset($_SESSION["username"])){
       </div>
       <div class="main-fitur-profile">
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
+          <a class="button-fitur-profile"  id="button-click-detail"href="/detail profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-favorit"href="#page-favorit-profile">Favorit</a>
+          <a class="button-fitur-profile" id="button-click-bookmark"href="/bookmark">Bookmark</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-notif" href="#page-notif-profile">Notifications</a>
+          <a class="button-fitur-profile"  id="button-click-notif" href="/notifications">Notifications</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-privacy" href="#page-privacy-profile">Privacy Policy</a>
+          <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-help" href="#page-help-profile">faQ Help</a>
+          <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-about" href="#page-about-profile">About</a>
+          <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
         </div>
       </div>
     </section>
@@ -47,7 +47,7 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>GNews</title>
+  <title>Profile</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -66,22 +66,22 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
       <br>
       <div class="main-fitur-profile">
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
+          <a class="button-fitur-profile"  id="button-click-detail" href="/detail profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-favorit"href="#page-favorit-profile">Favorit</a>
+          <a class="button-fitur-profile" id="button-click-favorit"href="/bookmark">Bookmark</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-notif" href="#page-notif-profile">Notifications</a>
+          <a class="button-fitur-profile"  id="button-click-notif" href="/notifications">Notifications</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-privacy" href="#page-privacy-profile">Privacy Policy</a>
+          <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-help" href="#page-help-profile">faQ Help</a>
+          <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-about" href="#page-about-profile">About</a>
+          <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
         </div>
         <form action="/logout" method="POST" class="fitur-profile">
           <a href="/logout" class="button-fitur-profile" id="button-click-logout">Log Out</a>
