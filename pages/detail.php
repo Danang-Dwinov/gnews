@@ -13,6 +13,7 @@ if(!isset($_SESSION["username"])){
       </div>
     </section>
   </main>
+  <script src="../assets/js/pages/detail.js"></script>
   <?php
   exit;
 }
