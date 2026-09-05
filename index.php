@@ -14,8 +14,23 @@ switch ($request) {
     case '/profile':
         require __DIR__ . '/pages/profile.php';
         break;
-    case '/detail-profile':
+    case '/detail profile':
         require __DIR__ . '/pages/detail.php';
+        break;
+    case '/bookmark':
+        require __DIR__ . '/pages/bookmark.php';
+        break;
+    case '/privacy':
+        require __DIR__ . '/pages/privacy.php';
+        break;
+    case '/notifications':
+        require __DIR__ . '/pages/notifications.php';
+        break;
+    case '/help':
+        require __DIR__ . '/pages/help.php';
+        break;
+    case '/about':
+        require __DIR__ . '/pages/about.php';
         break;
     case '/auth':
         require __DIR__ . '/pages/auth.php';
