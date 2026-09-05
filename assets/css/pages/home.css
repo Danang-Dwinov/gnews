@@ -4,6 +4,23 @@
   font-family: Georgina,serif;
 }
 
+.header {
+  display: flex;
+  position: relative;
+}
+#go-login {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
 .page-category {
 }
 @media(min-width:768px){
