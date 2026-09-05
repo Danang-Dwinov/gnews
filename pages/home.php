@@ -15,7 +15,10 @@ require_once __DIR__ . '/../helper/homeRenderNews.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <?php require_once __DIR__ . "/../components/header.php";?>
+  <header class="header">
+    <h2 id="header-title">GNews.com</h2>
+    <a href="/auth" id="go-login">Login <i class="fa-solid fa-arrow-right"></i></a>
+  </header>
   <main>
     <section class="home-page" id="home-page">
       <?php require_once __DIR__ . "/../components/navbar.php";?>
