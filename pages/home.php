@@ -2,6 +2,30 @@
 session_start();
 require_once __DIR__ . '/../controllers/newscontrollers.php';
 require_once __DIR__ . '/../helper/homeRenderNews.php';
+if(!isset($_SESSION["username"])){
+  ?>
+  <header class="header">
+    <h2 id="header-title">GNews.com</h2>
+    <a href="/auth" id="go-login">Login <i class="fa-solid fa-arrow-right"></i></a>
+  </header>
+  <main>
+    <section class="home-page" id="home-page">
+      <?php require_once __DIR__ . "/../components/navbar.php";?>
+      <?php foreach ($categories as $slug => $label): ?>
+        <div class="page-category" id="page-<?=$slug?>" <?= $slug !== 'latest' ? 'style="display:none;"' : '' ?>>
+          <h2 class="title-nav-home" id="page-<?=$slug?>-title"><?=htmlspecialchars($label)?> -></h2>
+          <div class="news-list">
+              <?php render_news_cards($newsByCategory[$slug]); ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </section>
+  </main>
+  <?php require_once __DIR__ . "/../components/footer.php";?>
+  <script type="module" src="../assets/js/pages/home.js"></script>
+  <?php
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +41,6 @@ require_once __DIR__ . '/../helper/homeRenderNews.php';
 <body>
   <header class="header">
     <h2 id="header-title">GNews.com</h2>
-    <a href="/auth" id="go-login">Login <i class="fa-solid fa-arrow-right"></i></a>
   </header>
   <main>
     <section class="home-page" id="home-page">
