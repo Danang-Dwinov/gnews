@@ -55,6 +55,9 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
   <main>
     <section class="profile-page" id="profile-page">
       <div class="profile-header">
+        <a href="/settings" id="button-settings">
+          <i class="fa-solid fa-gear"></i>
+        </a>
         <div class="profile-head-img">
           <img src="../assets/images/image_profile.jpg" id="img-profile">
         </div>
