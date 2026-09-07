@@ -1,0 +1,26 @@
+.settings-page{
+  
+}
+
+.div-settings{
+  border-bottom:1px solid;
+  border-color:lightgrey;
+}
+.btn-settings{
+  padding:0px;
+  margin:0px;
+  border:0px solid;
+  border-color:white;
+  background-color: white;
+}
+.text-settings{
+  text-decoration:none;
+  font-size: 16px;
+  color:black;
+  width:100%;
+  padding-inline:8px;
+  padding-block:3px;
+}
+.text-link-settings{
+  text-decoration: none;
+}
