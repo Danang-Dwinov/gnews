@@ -14,6 +14,9 @@ switch ($request) {
     case '/profile':
         require __DIR__ . '/pages/profile.php';
         break;
+    case '/settings':
+        require __DIR__ . '/pages/settings.php';
+        break;
     case '/detail profile':
         require __DIR__ . '/pages/detail.php';
         break;
@@ -34,9 +37,6 @@ switch ($request) {
         break;
     case '/auth':
         require __DIR__ . '/pages/auth.php';
-        break;
-    case '/logout':
-        require __DIR__ . '/pages/logout.php';
         break;
     default:
         http_response_code(404);
