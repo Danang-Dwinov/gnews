@@ -5,6 +5,10 @@ if ($request === '/logout') {
   require __DIR__ . '/pages/logout.php';
   exit;
 }
+if ($request === '/deleteAccount') {
+  require __DIR__ . '/pages/deleteAccount.php';
+  exit;
+}
 
 $file = __DIR__ . $request;
 
