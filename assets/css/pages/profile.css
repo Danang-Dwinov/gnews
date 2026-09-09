@@ -12,6 +12,13 @@
     white 0px 0%
   );
 }
+#button-settings {
+  color:black;
+  font-size: 24px;
+  position:absolute;
+  right: 13px;
+  top:13px;
+}
 .profile-head-img {
   position: absolute;
   top: 50px;
