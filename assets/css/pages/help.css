@@ -1,0 +1,16 @@
+.help-page{
+  margin-inline: 13px;
+  margin-block:0px;
+}
+
+.faq-question {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+.faq-answer {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    margin-block:10px;
+}
