@@ -26,6 +26,12 @@
   font-size: 27px;
   margin:0px;
   position: absolute;
-  top:13px;
+  top:14px;
   left:48px;
+}
+#bookmark-content{
+  font-size: 25px;
+  position: absolute;
+  top:15px;
+  right:15px;
 }
