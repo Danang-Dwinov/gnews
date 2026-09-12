@@ -15,7 +15,7 @@ if(!isset($_SESSION["username"])){
       </div>
       <div class="main-fitur-profile">
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail"href="/detail profile">Detail Profile</a>
+          <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-bookmark"href="/bookmark">Bookmark</a>
@@ -69,7 +69,7 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
       <br>
       <div class="main-fitur-profile">
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail" href="/detail profile">Detail Profile</a>
+          <a class="button-fitur-profile"  id="button-click-detail" href="/detail-profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-favorit"href="/bookmark">Bookmark</a>
@@ -86,9 +86,6 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
         <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
         </div>
-        <form action="/logout" method="POST" class="fitur-profile">
-          <a href="/logout" class="button-fitur-profile" id="button-click-logout">Log Out</a>
-        </form>
       </div>
     </section>
   </main>
