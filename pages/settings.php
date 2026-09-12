@@ -34,6 +34,13 @@ if(!isset($_SESSION["username"])){
           </button>
         </form>
       </div>
+      <div class="div-settings">
+        <form action="/logout" method="POST" onsubmit="return btnLogout()">
+          <button class="btn-settings" onclick="btnLogout()">
+            <p class="text-settings">Logout</p>
+          </button>
+        </form>
+      </div>
     </section>
   </main>
   <script src="../assets/js/pages/settings.js"></script>
