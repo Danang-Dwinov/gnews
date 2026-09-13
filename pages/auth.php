@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../config/database.php';
 session_start();
 
+$signup_message ="";
 if(isset($_POST['submit-signup'])){
   $full_name = $_POST['name'];
   $username = trim($_POST['username']);
@@ -9,8 +10,6 @@ if(isset($_POST['submit-signup'])){
   $password = trim($_POST['password']);
   
   $hash_password = password_hash($password, PASSWORD_DEFAULT);
-  
-  $signup_message ="";
   
   $sql = "INSERT INTO users(full_name, username, email, password) values(?,?,?,?)";
   $stmt = $conn->prepare($sql);
@@ -24,12 +23,11 @@ if(isset($_POST['submit-signup'])){
   }
 }
 
+$login_message = "";
 if(isset($_POST['submit-login'])){
   $username = trim($_POST['username']);
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
-  
-  $login_message = "";
   
   $sql = "SELECT * FROM users WHERE username = ?";
   $stmt = $conn->prepare($sql);
@@ -42,6 +40,8 @@ if(isset($_POST['submit-login'])){
       
       if(password_verify($password, $row["password"])){
         $_SESSION['username'] = $username;
+        
+        $_SESSION['login-message'] = "Login succeed";
         header("Location: /");
         exit();
         
@@ -77,6 +77,10 @@ if(isset($_POST['submit-login'])){
           <button id="opsi-signup">Sign Up</buttom>
         </div>
         <form method="POST" action="/auth" id="form-login">
+          <?php if (isset($_SESSION['pesan'])):?>
+            <p id="logout-message"><?=$_SESSION['pesan']?></p>
+            <?php unset($_SESSION['pesan']);?>
+          <?php endif; ?>
           <br>
           <label id="login-username-label" for="username">username :</label>
           <br>
@@ -100,6 +104,7 @@ if(isset($_POST['submit-login'])){
             <label for="login-remember-checkbox" id="login-remember-label">Remember me</label>
             <a href="https://myaccount.google.com/?hl=id" id="login-forgot-password-link">forgot password?</a>
           </div>
+          <p id="form-message"><?= $login_message ?></p>
           <input type="submit" value="Login" id="login-submit-btn" name="submit-login">
           <a href="/" class="back-home"> <i class="fa-solid fa-arrow-left"></i> Back to Home</a>
         </form>
@@ -141,6 +146,7 @@ if(isset($_POST['submit-login'])){
             <input type="checkbox" id="signup-agree-checkbox">
             <label for="signup-agree-checkbox" id="signup-agree-label">I agree to the Terms & Conditions and Privacy Policy</label>
           </div>
+          <i><?= $signup_message ?></i>
           <input type="submit" value="SignUp" id="signup-submit-btn" name="submit-signup">
           <a href="/" class="back-home"> <i class="fa-solid fa-arrow-left"></i> Back to Home</a>
         </form>
