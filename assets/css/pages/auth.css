@@ -55,6 +55,11 @@
   flex:1;
   text-align: center;
 }
+
+#logout-message{
+  font-size:17px;
+}
+
 /*text form*/
 #form-login {
   display:block;
