@@ -19,4 +19,14 @@ function home_nav() {
   });
 }
 
+function showNotif(el) {
+  el.classList.remove('show');
+  void el.offsetWidth;
+  el.classList.add('show');
+}
+
+const notif = document.querySelector('.notif');
+    
+showNotif(notif);
+
 home_nav();
