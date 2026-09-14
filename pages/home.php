@@ -40,6 +40,15 @@ if(!isset($_SESSION["username"])){
 </head>
 <body>
   <header class="header">
+    <?php if(isset($_SESSION['login-message'])):?>
+      <div class="notif">
+        <p id="login-message-home">
+            <?=htmlspecialchars($_SESSION['login-message'] )?>
+          </p>
+        <i id="icon-message-home" class="fa-solid fa-circle-check"></i>
+      </div>
+      <?php unset($_SESSION["login-message"]);?>
+    <?php endif; ?>
     <h2 id="header-title">GNews.com</h2>
   </header>
   <main>
