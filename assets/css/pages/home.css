@@ -20,6 +20,51 @@
   font-size: 18px;
   text-decoration: none;
 }
+.notif {
+  height: 41px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 46.5%;
+  width:300px;
+  transform: translate(-50%, -60px);
+  padding: 0px 10px 0px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.notif.show {
+  animation-name: popupAnim;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popupAnim {
+  0%   { transform: translate(-50%, -60px); }
+  10%  { transform: translate(-50%, 0px); }
+  90%  { transform: translate(-50%, 0px); }
+  100% { transform: translate(-50%, -60px); }
+}
+
+#login-message-home {
+  margin: 0;
+  color: black;
+  font-size: 16px;
+  position:absolute;
+  left:10px;
+}
+
+#icon-message-home {
+  font-size: 16px;
+  color: green;
+  position:absolute;
+  right:10px;
+}
 
 .page-category {
 }
