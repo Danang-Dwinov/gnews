@@ -18,12 +18,6 @@ if(!isset($_SESSION["username"])){
           <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-bookmark"href="/bookmark">Bookmark</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-notif" href="/notifications">Notifications</a>
-        </div>
-        <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
         </div>
         <div class="fitur-profile">

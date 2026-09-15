@@ -290,3 +290,28 @@
 .back-home:hover {
   text-decoration: underline;
 }
+
+.message-auth{
+  border:1px solid;
+  padding:0px;
+  margin:0px;
+  width:100%;
+  display:flex;
+  position:relative;
+  height:20px;
+  padding-block:2px;
+}
+#text-message-auth{
+  padding:0px;
+  margin:0px;
+  color:red;
+  position:absolute;
+  left:3px;
+}
+#icon-message-auth{
+  padding:0px;
+  margin:0px;
+  color:red;
+  position:absolute;
+  right:3px;
+}
