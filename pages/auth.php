@@ -47,7 +47,7 @@ if(isset($_POST['submit-login'])){
       if(password_verify($password, $row["password"])){
         $_SESSION['username'] = $username;
         
-        $_SESSION['login-succeed-message'] = "Login succeed";
+        $_SESSION['login-notif-message'] = "Login succeed";
         header("Location: /");
         exit();
         
@@ -74,7 +74,10 @@ if(isset($_POST['submit-login'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <?php require_once __DIR__ . "/../components/header.php";?>
+  <header class="header">
+    <?php include __DIR__ . "/../components/notifications.php";?>
+    <h2 id="header-title">GNews.com</h2>
+  </header>
   <main>
     <section class="login-page" id="login-page">
       <div class="container-main" align="center">
