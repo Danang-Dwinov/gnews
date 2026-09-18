@@ -2,7 +2,6 @@
 require_once __DIR__ . '/../config/database.php';
 session_start();
 
-$signup_message ="";
 if(isset($_POST['submit-signup'])){
   $full_name = $_POST['name'];
   $username = trim($_POST['username']);
@@ -16,11 +15,13 @@ if(isset($_POST['submit-signup'])){
   $stmt = $conn->prepare($sql);
   
   if($stmt->execute([$full_name, $username, $email_validate, $hash_password])){
-    header("Location: /");
-    exit();
-  } else{
+    $_SESSION['login-notif-message'] = 'Signup successful, please login';
     header("Location: /auth");
-    exit();
+    exit;
+  } else{
+    $_SESSION['login-notif-message'] = 'Signup fail';
+    header("Location: /auth");
+    exit;
   }
 }
 
