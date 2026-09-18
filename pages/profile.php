@@ -69,9 +69,6 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
           <a class="button-fitur-profile" id="button-click-favorit"href="/bookmark">Bookmark</a>
         </div>
         <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-notif" href="/notifications">Notifications</a>
-        </div>
-        <div class="fitur-profile">
           <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
         </div>
         <div class="fitur-profile">
