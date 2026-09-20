@@ -14,7 +14,8 @@ session_unset();
 session_destroy();
 
 session_start();
-$_SESSION['pesan'] = "Logout succeed";
+$_SESSION['login-notif-message'] = "Logout succeed";
+
 header('Location: /auth');
 exit;
 ?>
