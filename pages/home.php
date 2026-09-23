@@ -1,31 +1,5 @@
 <?php
-session_start();
-require_once __DIR__ . '/../controllers/newscontrollers.php';
-require_once __DIR__ . '/../helper/homeRenderNews.php';
-if(!isset($_SESSION["username"])){
-  ?>
-  <header class="header">
-    <h2 id="header-title">GNews.com</h2>
-    <a href="/auth" id="go-login">Login <i class="fa-solid fa-arrow-right"></i></a>
-  </header>
-  <main>
-    <section class="home-page" id="home-page">
-      <?php require_once __DIR__ . "/../components/navbar.php";?>
-      <?php foreach ($categories as $slug => $label): ?>
-        <div class="page-category" id="page-<?=$slug?>" <?= $slug !== 'latest' ? 'style="display:none;"' : '' ?>>
-          <h2 class="title-nav-home" id="page-<?=$slug?>-title"><?=htmlspecialchars($label)?> -></h2>
-          <div class="news-list">
-              <?php render_news_cards($newsByCategory[$slug]); ?>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </section>
-  </main>
-  <?php require_once __DIR__ . "/../components/footer.php";?>
-  <script type="module" src="../assets/js/pages/home.js"></script>
-  <?php
-  exit;
-}
+include __DIR__ . '/../controllers/HomeControllers.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,21 +13,11 @@ if(!isset($_SESSION["username"])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <header class="header">
-    <?php include __DIR__ . "/../components/notifications.php";?>
-    <h2 id="header-title">GNews.com</h2>
-  </header>
+  <?php include __DIR__ . '/../components/header.php';?>
   <main>
     <section class="home-page" id="home-page">
       <?php require_once __DIR__ . "/../components/navbar.php";?>
-      <?php foreach ($categories as $slug => $label): ?>
-        <div class="page-category" id="page-<?=$slug?>" <?= $slug !== 'latest' ? 'style="display:none;"' : '' ?>>
-          <h2 class="title-nav-home" id="page-<?=$slug?>-title"><?=htmlspecialchars($label)?> -></h2>
-          <div class="news-list">
-              <?php render_news_cards($newsByCategory[$slug]); ?>
-          </div>
-        </div>
-      <?php endforeach; ?>
+      <?= listContentHome($categories, $newsByCategory);?>
     </section>
   </main>
   <?php require_once __DIR__ . "/../components/footer.php";?>
