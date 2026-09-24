@@ -1,40 +1,7 @@
 <?php
-session_start();
-
-if(!isset($_SESSION["username"])){
-  ?>
-  <main>
-    <section class="profile-page" id="profile-page">
-      <div class="profile-header">
-        <div class="profile-head-img">
-          <img src="../assets/images/image_profile.jpg" id="img-profile">
-        </div>
-        <div class="profile-head-text">
-          <a href="/auth" id="btn-login-profile">Click for Login/Signup</a>
-        </div>
-      </div>
-      <div class="main-fitur-profile">
-        <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <?php require_once __DIR__ . "/../components/footer.php";?>
-  <?php
-  exit;
-}
-require_once __DIR__ . '/../controllers/profilecontrollers.php';
+require_once __DIR__ . '/../controllers/ProfileControllers.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,29 +22,63 @@ require_once __DIR__ . '/../controllers/profilecontrollers.php';
         <div class="profile-head-img">
           <img src="../assets/images/image_profile.jpg" id="img-profile">
         </div>
-        <div class="profile-head-text">
-          <p id="username-text-head"><?=htmlspecialchars($user['username'])?></p>
-          <p id="email-text-head"><?=htmlspecialchars($user['email'])?></p>
-        </div>
+        <?php
+        if(!isset($_SESSION['username'])){?>
+          <div class="profile-head-text">
+            <a href="/auth" id="btn-login-profile">Click for Login/Signup</a>
+          </div>
+          <?php
+        } else {
+          ?>
+          <div class="profile-head-text">
+            <p id="username-text-head"><?=htmlspecialchars($user['username'])?></p>
+            <p id="email-text-head"><?=htmlspecialchars($user['email'])?></p>
+          </div>
+          <?php
+        }
+        ?>
       </div>
       <br>
-      <div class="main-fitur-profile">
-        <div class="fitur-profile">
-          <a class="button-fitur-profile"  id="button-click-detail" href="/detail-profile">Detail Profile</a>
+      <?php
+      if(!isset($_SESSION['username'])){
+      ?>
+        <div class="main-fitur-profile">
+          <div class="fitur-profile">
+            <a class="button-fitur-profile"  id="button-click-detail"href="/detail-profile">Detail Profile</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
+          </div>
         </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-favorit"href="/bookmark">Bookmark</a>
+        <?php
+      } else{
+        ?>
+        <div class="main-fitur-profile">
+          <div class="fitur-profile">
+            <a class="button-fitur-profile"  id="button-click-detail" href="/detail-profile">Detail Profile</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-favorit"href="/bookmark">Bookmark</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
+          </div>
+          <div class="fitur-profile">
+            <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
+          </div>
         </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-privacy" href="/privacy">Privacy Policy</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-help" href="/help">faQ Help</a>
-        </div>
-        <div class="fitur-profile">
-          <a class="button-fitur-profile" id="button-click-about" href="/about">About</a>
-        </div>
-      </div>
+        <?php
+      }
+      ?>
     </section>
   </main>
   <?php require_once __DIR__ . "/../components/footer.php";?>
